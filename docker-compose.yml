@@ -3,8 +3,11 @@ services:
   frontend:
     image: ghcr.io/iknowca/cicdfronttest:latest
     container_name: docker-frontend-deploy-server
+    ports:
+      - "80:80"
     networks:
       - app
+
 networks:
   app:
     driver: bridge
